@@ -1,20 +1,21 @@
-function Header(){
+function Header() {
+    const names = [
+        'Home',
+        'About',
+        'Services',
+        'Contact'
+    ]
     return (
         <header>
             <h1>Dark Programmer</h1>
             <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+                {
+                    names.map((food) => 
+                        <li>
+                            <a href="#">{food}</a>
+                        </li>
+                    )
+                }
             </ul>
 
             <hr />
