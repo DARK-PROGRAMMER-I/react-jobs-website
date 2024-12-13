@@ -1,4 +1,7 @@
 import styles from '../styles/List.module.css'
+import Proptypes from 'prop-types'
+
+
 
 function List({ listOfItems, category }) {
 
@@ -25,6 +28,12 @@ function List({ listOfItems, category }) {
             
         </>
     );
+}
+
+
+List.defaultProps = {
+    listOfItems: [],
+    category: 'Undefined'
 }
 
 
