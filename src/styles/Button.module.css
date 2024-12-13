@@ -4,5 +4,7 @@
     border-radius: 5px;
     color: white;
     cursor: pointer;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.179)
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.179);
+    /* padding-inline: 10px; */
+    padding-block: 10px;
 }
