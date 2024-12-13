@@ -1,12 +1,24 @@
-import Student from './components/Student.jsx';
+import List from './components/List.jsx';
 function App() {
+  const listOfFruits = [
+    {name: "Aaam", vitamin: 20},
+    {name: "Kela", vitamin: 140},
+    {name: "Amrood", vitamin: 32},
+    {name: "Nair", vitamin: 73},
+  ]
+
+
+  const listOfVegitables = [
+    {name: "Bhindi", vitamin: 10},
+    {name: "Toori", vitamin: 60},
+    {name: "Kaddu", vitamin: 192},
+    {name: "Looki", vitamin: 83},
+  ]
+
 
   return (
     <>
-      <Student name= "Ammar" age= {26} isStudent={true}/>
-      <Student name= "Hammad" age= {24} isStudent={true}/>
-      <Student name= "Ahmad" age= {19} isStudent={true}/>
-      <Student/>
+      <List listOfItems= {listOfFruits} category= "Fruits"/>
     </> 
   );
 }
