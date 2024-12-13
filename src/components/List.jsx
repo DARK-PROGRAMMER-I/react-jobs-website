@@ -6,7 +6,7 @@ import Proptypes from 'prop-types'
 function List({ listOfItems, category }) {
 
     const itemsList = listOfItems.map(item =><>
-        <li>
+        <li key={item.id}>
             {item.name} : {item.vitamin}
         </li>
         </>);
@@ -31,9 +31,18 @@ function List({ listOfItems, category }) {
 }
 
 
+List.proptypes = {
+    listOfItems: Proptypes.arrayOf(Proptypes.shape({
+        name: Proptypes.string,
+        vitamin: Proptypes.number,
+        id: Proptypes.number
+    })),
+    category: Proptypes.string
+}
+
 List.defaultProps = {
     listOfItems: [],
-    category: 'Undefined'
+    category: 'Category'
 }
 
 
