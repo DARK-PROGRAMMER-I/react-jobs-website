@@ -1,5 +1,23 @@
-.list-title{
+.listTitle{
     text-align: center;
     background-color: rgb(225, 109, 0);
     color: white;
+    border: 2px solid rgba(0, 0, 0, 0.796);
+    font-size: 22px;
+    margin: 0px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.items li{
+    text-align: center;
+    color: rgb(50, 50, 50);
+    list-style: none;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.emptyList{
+    text-align: center;
+    font-size: 16px;
 }

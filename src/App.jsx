@@ -20,6 +20,7 @@ function App() {
     <>
       <List listOfItems= {listOfFruits} category= "Fruits"/>
       <List listOfItems= {listOfVegitables} category= "Vegitables"/>
+      <List listOfItems= {[]} category= "Sea Food"/>
     </> 
   );
 }

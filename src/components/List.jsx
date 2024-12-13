@@ -1,4 +1,4 @@
-
+import styles from '../styles/List.module.css'
 
 function List({ listOfItems, category }) {
 
@@ -10,11 +10,19 @@ function List({ listOfItems, category }) {
 
 
     return (
+       
         <>
-            <h3 className="">{category}</h3>
-            <ol className="items">
-                {itemsList}
-            </ol>
+            <h3 className={styles.listTitle}>{category}</h3>
+            {
+                 itemsList.length == 0 ?
+                 <p className={styles.emptyList}>
+                     List is Empty....
+                 </p> :
+                 <ol className={styles.items}>
+                 {itemsList}
+             </ol>
+            }
+            
         </>
     );
 }
