@@ -1,5 +1,6 @@
-import Counter from './components/Counter.jsx';
-// import List from './components/List.jsx';
+import MyComponenets from './components/MyComponents.jsx';
+
+
 function App() {
   // const listOfFruits = [
   //   {id : 1, name: "Aaam", vitamin: 20},
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <>
-     <Counter/>
+     <MyComponenets/>
     </> 
   );
 }
