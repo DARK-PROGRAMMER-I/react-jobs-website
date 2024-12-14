@@ -1,5 +1,5 @@
 import styles from '../styles/List.module.css'
-import Proptypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 
 
@@ -32,12 +32,12 @@ function List({ listOfItems, category }) {
 
 
 List.proptypes = {
-    listOfItems: Proptypes.arrayOf(Proptypes.shape({
-        name: Proptypes.string,
-        vitamin: Proptypes.number,
-        id: Proptypes.number
+    listOfItems: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        vitamin: PropTypes.number.isRequired,
+        id: PropTypes.number.isRequired
     })),
-    category: Proptypes.string
+    category: PropTypes.string.isRequired
 }
 
 List.defaultProps = {
