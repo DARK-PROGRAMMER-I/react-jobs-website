@@ -1,27 +1,38 @@
 import { useState } from "react";
 
 function Counter(){
-    const [name, setName] = useState("Name");
-    const [age, setAge] = useState(0);
-    const [isEmploye, setIsEmploye] = useState(false);
 
 
-    const changeName = ()=> {
-        setName('Ammar');
-    }
+    // const [name, setName] = useState("Name");
+    // const [age, setAge] = useState(0);
+    // const [isEmploye, setIsEmploye] = useState(false);
 
-    const ageIncrement = ()=> {
-        setAge(age + 1);
-    }
+    // const changeName = ()=> {
+    //     setName('Ammar');
+    // }
+
+    // const ageIncrement = ()=> {
+    //     setAge(age + 1);
+    // }
 
 
-    const toggleStatus = ()=> {
-        setIsEmploye(!isEmploye)
-    }
+    // const toggleStatus = ()=> {
+    //     setIsEmploye(!isEmploye)
+    // }
+
+
+    const [count, setCount] = useState(0);
+
 
     return (
-        <div>
-            <p>
+        <div className={}>
+            <h2>
+                Count: {count}
+            </h2>
+
+
+
+            {/* <p>
                 Name: {name}
             </p>
             <button onClick={changeName}>
@@ -39,7 +50,8 @@ function Counter(){
             </p>
             <button onClick={toggleStatus}>
                 Toggle Status
-            </button>
+            </button> */}
+            
         </div>
     );
 }
