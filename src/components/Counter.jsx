@@ -10,6 +10,15 @@ function Counter(){
         setName('Ammar');
     }
 
+    const ageIncrement = ()=> {
+        setAge(age + 1);
+    }
+
+
+    const toggleStatus = ()=> {
+        setIsEmploye(!isEmploye)
+    }
+
     return (
         <div>
             <p>
@@ -22,12 +31,15 @@ function Counter(){
             <p>
                 Age: {age}
             </p>
-            <button onClick={changeName}>
+            <button onClick={ageIncrement}>
                 Increment Age
             </button>
             <p>
                 Employe: {isEmploye ? "Yes" : "No"}
             </p>
+            <button onClick={toggleStatus}>
+                Toggle Status
+            </button>
         </div>
     );
 }
