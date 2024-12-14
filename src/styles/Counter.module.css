@@ -9,15 +9,23 @@
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #afafaf;
+    cursor: pointer;
 }
 
 .increment{
+
     background-color: rgb(0, 169, 31);
     color: white;
     margin-inline: 10px;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
     border: 1px solid #afafaf;
+}
+
+.increment:hover{
+    background-color:white;
+    color:  rgb(0, 169, 31);
 }
 
 .reset{
@@ -26,5 +34,6 @@
     margin-inline: 10px;
     padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
     border: 1px solid #afafaf;
 }

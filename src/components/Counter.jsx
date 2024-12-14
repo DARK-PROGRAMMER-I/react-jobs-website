@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from '../styles/Counter.module.css'
 
 
-function Counter(){
+function Counter() {
 
 
     // const [name, setName] = useState("Name");
@@ -25,17 +25,17 @@ function Counter(){
 
     const [count, setCount] = useState(0);
 
-    const incrementCounter = ()=> {
+    const incrementCounter = () => {
         setCount(count + 1);
     }
 
-    const decrementCounter = ()=>{
-        if(count >0){
-        setCount(count -1);
+    const decrementCounter = () => {
+        if (count > 0) {
+            setCount(count - 1);
         }
     }
 
-    const resetCounter = ()=> {
+    const resetCounter = () => {
         setCount(0);
     }
 
@@ -46,11 +46,10 @@ function Counter(){
                 Count: {count}
             </h2>
 
-            <div>
-                <button className={styles.decrement} onClick={decrementCounter}>Decrement</button>
-                <button className={styles.reset} onClick={resetCounter}>Reset</button>
-                <button className={styles.increment} onClick={incrementCounter}>Increment</button>
-            </div>
+            <button className={styles.decrement} onClick={decrementCounter}>Decrement</button>
+            <button className={styles.reset} onClick={resetCounter}>Reset</button>
+            <button className={styles.increment} onClick={incrementCounter}>Increment</button>
+
 
 
             {/* <p>
@@ -72,7 +71,7 @@ function Counter(){
             <button onClick={toggleStatus}>
                 Toggle Status
             </button> */}
-            
+
         </div>
     );
 }
