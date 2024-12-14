@@ -13,9 +13,13 @@ function Button(){
         }
     };
 
+    const handleEvent = (event) => {
+        console.log(event.target.style.display);
+    }
+
 
     return (
-        <button onClick={()=> handleClick("Ammar")}
+        <button onClick={(event)=> handleEvent(event)}
          className={styles.button}>
             Click Me 😄
         </button>
