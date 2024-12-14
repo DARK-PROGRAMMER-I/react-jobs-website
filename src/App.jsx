@@ -1,5 +1,5 @@
-import Button from './components/Button.jsx';
-import List from './components/List.jsx';
+import Counter from './components/Counter.jsx';
+// import List from './components/List.jsx';
 function App() {
   // const listOfFruits = [
   //   {id : 1, name: "Aaam", vitamin: 20},
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-     <Button/>
+     <Counter/>
     </> 
   );
 }
