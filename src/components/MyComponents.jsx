@@ -32,6 +32,14 @@ function MyComponenets(){
         setFood(f => [...f ,  newItem  ]);
     }
 
+    const removeFoodItem = (index)=>{
+        const newList = foods.filter((value, i) => {
+            return i !== index;
+        });
+
+        setFood(newList);
+    }
+
 
 
     const setUserName = (event)=>{
@@ -129,7 +137,7 @@ function MyComponenets(){
             <ul>
                 {
                     foods.map((food, index)=>
-                        <li key={index} >
+                        <li key={index} onClick={()=> removeFoodItem(index)} >
                             {food}
                         </li>
                     )
