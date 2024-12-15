@@ -9,6 +9,13 @@ function MyComponenets(){
     const [shipping, setShipping] = useState("");
 
 
+    const [laptop, setLaptop ] = useState({
+        year: 2024,
+        company: "Hp",
+        name: "Hp Leion 11"
+    });
+
+
     const setUserName = (event)=>{
         setName(event.target.value);
     }
@@ -28,6 +35,15 @@ function MyComponenets(){
     const setShippingMethod = (event)=>{
         setShipping(event.target.value);
     } 
+
+
+    const setLaptopYear = (event)=>{
+        setLaptop(l => ({...l , year:event.target.value}));
+    }
+
+    const setLaptopCompany = (event)=>{
+        setLaptop(l => ({...l, company: event.target.company}))
+    }
 
 
     return (
@@ -69,6 +85,16 @@ function MyComponenets(){
             <input type="radio" value="Delivery" checked={shipping === "Delivery"} onChange={setShippingMethod}/>
             Delivery
         </label>
+
+        <div>
+            <p>My Favorite Laptop : {laptop.name} {laptop.company} {laptop.year} </p>
+            <input type="number" value={laptop.year} onChange={setLaptopYear} /><br />
+            <input type="string" value={laptop.company} onChange={setLaptopCompany} /><br />
+            <input type="string" value={laptop.name} onChange={setLaptopYear} /><br />
+
+        </div>
+
+
         </>
     );
 }
