@@ -42,9 +42,13 @@ function MyComponenets(){
     }
 
     const setLaptopCompany = (event)=>{
-        setLaptop(l => ({...l, company: event.target.company}))
+        setLaptop(l => ({...l, company: event.target.value}))
     }
 
+
+    const setlaptopName = (event)=>{
+        setLaptop(l=> ({...l, name: event.target.value}))
+    } 
 
     return (
         <>
@@ -90,7 +94,7 @@ function MyComponenets(){
             <p>My Favorite Laptop : {laptop.name} {laptop.company} {laptop.year} </p>
             <input type="number" value={laptop.year} onChange={setLaptopYear} /><br />
             <input type="string" value={laptop.company} onChange={setLaptopCompany} /><br />
-            <input type="string" value={laptop.name} onChange={setLaptopYear} /><br />
+            <input type="string" value={laptop.name} onChange={setlaptopName} /><br />
 
         </div>
 
