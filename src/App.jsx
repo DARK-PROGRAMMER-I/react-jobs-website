@@ -1,4 +1,4 @@
-import MyComponenets from './components/MyComponents.jsx';
+import ColorPicker from './components/ColorPicker.jsx';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-     <MyComponenets/>
+     <ColorPicker/>
     </> 
   );
 }
