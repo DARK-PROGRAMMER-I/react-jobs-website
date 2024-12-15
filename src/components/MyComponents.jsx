@@ -16,6 +16,24 @@ function MyComponenets(){
     });
 
 
+    const [foods , setFood] = useState([
+        "Mango",
+        "Apple",
+        "Banana",
+    ]);
+
+
+    const addNewFood = ()=>{
+        const newItem = document.getElementById("foodInput").value;
+        document.getElementById("foodInput").value = "";
+
+        foods.includes(newItem) ?
+        null:
+        setFood(f => [...f ,  newItem  ]);
+    }
+
+
+
     const setUserName = (event)=>{
         setName(event.target.value);
     }
@@ -50,6 +68,11 @@ function MyComponenets(){
         setLaptop(l=> ({...l, name: event.target.value}))
     } 
 
+
+
+
+
+
     return (
         <>
         <input value={name} onChange={(event)=> setUserName(event)}/>
@@ -74,7 +97,7 @@ function MyComponenets(){
         </select>
         <p>Payment Method : {payment}</p>
 
-
+ 
         <label >
             <input 
             type="radio"
@@ -98,6 +121,23 @@ function MyComponenets(){
 
         </div>
 
+
+        <div>
+            <h2>
+                List of Foods
+            </h2>
+            <ul>
+                {
+                    foods.map((food, index)=>
+                        <li key={index} >
+                            {food}
+                        </li>
+                    )
+                }
+            </ul>
+
+            <input type="text"  id="foodInput" /> <button onClick={addNewFood}>Add Food</button>
+        </div>
 
         </>
     );
