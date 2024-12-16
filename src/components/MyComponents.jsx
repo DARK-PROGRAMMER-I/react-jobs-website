@@ -23,6 +23,9 @@ function MyComponenets(){
     ]);
 
 
+
+
+
     const addNewFood = ()=>{
         const newItem = document.getElementById("foodInput").value;
         document.getElementById("foodInput").value = "";
@@ -39,7 +42,6 @@ function MyComponenets(){
 
         setFood(newList);
     }
-
 
 
     const setUserName = (event)=>{
@@ -78,11 +80,70 @@ function MyComponenets(){
 
 
 
+    const [cars , setCars] = useState([]);
+    const [year, setYear] = useState(new Date().getFullYear());
+    const [company, setCompany] = useState("");
+    const [carName, setCarName] = useState("");
+
+    const addCarInList = ()=>{
+        const newCar = ({
+            year: year,
+            company: company,
+            carName: carName
+        });
+
+        setCars(c => [...c , newCar]);
+
+        setYear(new Date().getFullYear());
+        setCarName("");
+        setCompany("");
+    }
+
+    const removeCarFromList = (index)=>{
+        setCars(c => c.filter((car, i) => i !== index));
+    }
+
+    const onYearChange = (event)=>{
+        setYear(event.target.value);
+    }
+
+    const onCompanyChange = (event)=>{
+        setCompany(event.target.value);
+    }
+    
+    const onCarNameChange = (event)=>{
+        setCarName(event.target.value);
+    }
+    
 
 
 
     return (
         <>
+       
+        <h1>List of Cars</h1>
+        <ul>
+            {
+                cars.map((car, index) => <>
+                    <li key={index} onClick={() => removeCarFromList(index)}>
+                        {car.carName} {car.company} {car.year}
+                    </li>
+                </> )
+            }
+        </ul>
+
+        <input type="number" value={year} onChange={onYearChange} /> <br />
+        <input type="text" value={company} onChange={onCompanyChange} /> <br />
+        <input type="text" value={carName} onChange={onCarNameChange} /> <br />
+        <br />
+        <button onClick={addCarInList}>
+            Add Car
+        </button>
+
+
+        <br />
+        <br />
+        <br />
         <input value={name} onChange={(event)=> setUserName(event)}/>
         <p>Name : {name}</p>
 

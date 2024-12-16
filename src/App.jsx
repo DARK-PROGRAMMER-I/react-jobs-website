@@ -1,4 +1,4 @@
-import MyComponenets from './components/MyComponents.jsx';
+import TodoList from './components/TodoList.jsx';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-     <MyComponenets/>
+     <TodoList/>
     </> 
   );
 }
