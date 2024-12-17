@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(58, 58, 58);
+}
+
+.mainContainer {
+    text-align: center;
+}
+
+h1{
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 5px;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(148, 255, 54);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.todos{
+    margin: 10px ;
+    border-radius: 5px;
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.789);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.todos span{
+    flex: 1;
+    text-align: start;
+
+}
+.todos button{
+    margin-left: 5px;
+}
+
+.delete{
+    background-color: rgba(58, 7, 7, 0.822);
+}
+.delete:hover{
+    transition: 1s ease;
+    background-color: rgba(231, 0, 0, 0.822); 
+}
+
+.up{
+    background-color: rgba(118, 0, 237, 0.822);
+}
+
+.up:hover{
+    transition: 1s ease;
+    background-color: rgba(18, 136, 0, 0.822);
+}
