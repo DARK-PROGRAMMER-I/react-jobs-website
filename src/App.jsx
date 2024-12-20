@@ -1,4 +1,4 @@
-import TodoList from './components/TodoList.jsx';
+import Timer from './components/Timer.jsx';
 
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-     <TodoList/>
+     <Timer/>
     </> 
   );
 }
